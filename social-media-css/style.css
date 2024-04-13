@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Sanchez", serif;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+}
+
+/* Header */
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 70%);
+  width: 100vw;
+}
+
+.header h1 {
+  font-size: 80px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  animation-name: focus-in-contract;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+/* Social Media Icons */
+.social-media {
+  font-size: 70px;
+  position: relative;
+  top: -60px;
+  text-align: center;
+}
+
+.social-media i {
+  animation: focus-in-contract 3s linear;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.social-media i:hover {
+  transform: scale(1.1);
+}
+/* Footer */
+.footer {
+  position: absolute;
+  top: calc(100vh - 50px);
+  width: 100%;
+  text-align: center;
+}
